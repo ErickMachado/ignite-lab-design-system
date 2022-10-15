@@ -19,31 +19,41 @@ export function App() {
         <main className="flex-1">
           <form className="flex flex-col gap-4 mt-10">
             <div>
-              <Text className="font-semibold mb-3 inline-block">
-                Endereço de e-mail
+              <Text className="font-semibold mb-3 inline-block" asChild>
+                <label htmlFor="email">Endereço de e-mail</label>
               </Text>
               <TextInput.Root>
                 <TextInput.Icon>
                   <EnvelopeSimple size={24} className="text-gray-400" />
                 </TextInput.Icon>
-                <TextInput.Field placeholder="johndoe@gmail.com" type="email" />
+                <TextInput.Field
+                  placeholder="johndoe@gmail.com"
+                  type="email"
+                  id="email"
+                />
               </TextInput.Root>
             </div>
             <div>
-              <Text className="font-semibold mb-3 inline-block">Senha</Text>
+              <Text className="font-semibold mb-3 inline-block" asChild>
+                <label htmlFor="password">Senha</label>
+              </Text>
               <TextInput.Root>
                 <TextInput.Icon>
                   <Lock size={24} className="text-gray-400" />
                 </TextInput.Icon>
-                <TextInput.Field placeholder="************" type="password" />
+                <TextInput.Field
+                  placeholder="************"
+                  type="password"
+                  id="password"
+                />
               </TextInput.Root>
             </div>
             <div>
               <label
-                htmlFor=""
+                htmlFor="remember-me"
                 className="text-gray-100 text-xs flex items-center gap-2"
               >
-                <Checkbox />
+                <Checkbox id="remember-me" />
                 Lembrar de mim por 30 dias
               </label>
             </div>
@@ -54,10 +64,10 @@ export function App() {
         </main>
         <footer className="mt-6 flex flex-col gap-4 items-center">
           <Text className="text-gray-400 underline" asChild>
-            <a href="">Esqueceu sua senha?</a>
+            <a href="#">Esqueceu sua senha?</a>
           </Text>
           <Text className="text-gray-400 underline" asChild>
-            <a href="">Não possui conta? Crie uma</a>
+            <a href="#">Não possui conta? Crie uma</a>
           </Text>
         </footer>
       </div>
